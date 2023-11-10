@@ -1,4 +1,5 @@
 import Navbar from "../components/navbar"
+import Register from "../components/register"
 
 
 function Login() {
@@ -6,6 +7,7 @@ function Login() {
     return(
         <>
         <Navbar/>
+        <Register/>
         </>
     )
 }

@@ -1,6 +1,10 @@
 import { Margin, Twitter } from "@mui/icons-material";
 import { AppBar, Box, IconButton, Typography, Button, Stack } from "@mui/material";
 import img from '../assets/Ford_logo.png'
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 
 function Navbar() {
@@ -8,19 +12,18 @@ function Navbar() {
     return(
         <>
         <Box sx={{ flexGrow: 1, fontFamily: "Roboto"}}>
-            <AppBar sx={{padding: 1}}>
-                 <Stack direction='row' justifyContent='space-betwen'>
+            <AppBar sx={{padding: 1, background: 'transparent', boxShadow: 'none'}} >
+                 <Stack direction='row' justifyContent='space-betwen' alignItems='center' >
                     <IconButton>
                         <img src={img} style={{width: '80px'}}/>
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontFamily: 'monospace', fontWeight: 700, mr: 2, alignItems:}}>
-                        News
+                    <Typography variant="h5"  justifyItems='center' alignItems='center' color="#1976D2" fontFamily='roboto' fontSize='14' sx={{ flexGrow: 1, fontWeight: 500, mr: 2 }}>
+                        Home
                     </Typography>
                     <Stack direction='row' spacing={2}>
-                        <Button color="inherit" variant="outlined">Login</Button>
-                        <Button color="inherit" variant="outlined">Register</Button>
+                        <Button>Sign In</Button>
+                        <Button variant="outlined">Sign Up</Button>
                     </Stack>
-                    
                 </Stack>
             </AppBar>
         </Box>
